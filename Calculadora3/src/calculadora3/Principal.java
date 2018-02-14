@@ -21,8 +21,11 @@ public class Principal {
 
         Scanner miEscaner;
         miEscaner = new Scanner(System.in);
+        
+        Trigonometrica miTrigo = new Trigonometrica();
 
         int opcion;
+        float entrada;
 
         System.out.println("Ingrese el número de la operacion que desee realizar");
         System.out.println("1.Sumar");
@@ -30,13 +33,11 @@ public class Principal {
         System.out.println("3.Multiplicar");
         System.out.println("4.Coseno");
 
-        opcion = (int) miEscaner.nextFloat();
-        miCalculadora.set(opcion);
-
+        opcion = miEscaner.nextInt();
+        
         switch (opcion) {
             case 1: {
-                float entrada;
-
+            
                 System.out.println("Ingrese el primer número");
 
                 entrada = miEscaner.nextFloat();
@@ -47,35 +48,73 @@ public class Principal {
                 entrada = miEscaner.nextFloat();
                 miCalculadora.setY(entrada);
                 
-
                 miCalculadora.sumar();
+                
+                System.out.println("El resultado de la suma es:"+miCalculadora.getR());
+                
+                
             }
             break;
 
             case 2: {
+                
+                System.out.println("Ingrese el primer número");
+
+                entrada = miEscaner.nextFloat();
+                miCalculadora.setX(entrada);
+                
+                System.out.println("Ingrese el segundo número");
+
+                entrada = miEscaner.nextFloat();
+                miCalculadora.setY(entrada);
+                
                 miCalculadora.restar();
+                
+                System.out.println("El resultado de la resta es:"+miCalculadora.getR());
             }
             break;
 
             case 3: {
+                
+                System.out.println("Ingrese el primer número");
+
+                entrada = miEscaner.nextFloat();
+                miCalculadora.setX(entrada);
+                
+                System.out.println("Ingrese el segundo número");
+
+                entrada = miEscaner.nextFloat();
+                miCalculadora.setY(entrada);
+                
                 miCalculadora.multiplicar();
+                
+                System.out.println("El resultado de la multiplicacion es:"+miCalculadora.getR());
+            }
+            break;
+            
+            case 4: {
+                
+                System.out.println("Ingrese el número");
+                
+                entrada = miEscaner.nextFloat();
+                miCalculadora.setX(entrada);
+                
+                miTrigo.coseno();
+                
+                System.out.println("El resultado del coseno es:"+miCalculadora.getR());
+                
+                
             }
             break;
 
             default: {
+                
+                System.out.println("La opcion que ingreso no corresponde a ninguna operacion");
 
             }
         }
-
-        int entrada;
-
-        entrada = miEscaner.nextInt();
-        miCalculadora.setX(entrada);
-
-        entrada = miEscaner.nextInt();
-        miCalculadora.setY(entrada);
-
-        Trigonometrica miTrigo = new Trigonometrica();
+        
+       
     }
 
 }

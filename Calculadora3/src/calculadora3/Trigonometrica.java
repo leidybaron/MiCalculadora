@@ -14,7 +14,8 @@ import static java.lang.Math.*;
 public class Trigonometrica extends Calculadora1 {
     
   
-    double coseno(){
-        return cos(x); 
+    void coseno(){
+        r= (float) cos(x); 
+        
     }
 }

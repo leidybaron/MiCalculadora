@@ -12,8 +12,8 @@ package calculadora3;
 public class Calculadora1 {
 
     protected float x;
-    private float y;
-    private float r;
+    protected float y;
+    protected float r;
 
     void sumar() {
 
@@ -42,27 +42,18 @@ public class Calculadora1 {
         r = x * y;
     }
    
-   public void setx(float x){
+   public void setX(float x){
        this.x=x;
    }
    
-   public void sety(float y){
+   public void setY(float y){
        this.y=y;
    }
    
-   public float getr(float r){
-       return r;
+   public float getR(){
+       return this.r;
    }
 
-    void setX(float entrada) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void setY(float entrada) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void set(int eleccion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
+   
 }
