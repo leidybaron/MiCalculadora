@@ -21,27 +21,48 @@ public class Calculadora1 {
     }
 
     void restar() {
-       
+        
+          if(x<y)
+        {
+            float a;
+            a = x;
+            x = y;
+            y = a;
+        }
+        if(x<0)
+        {
+            x = -x;
+            y = -y;
+        }
         r = x - y;
     }
     
-   public void setx(int x){
+    void multiplicar(){
+        
+        r = x * y;
+    }
+   
+   public void setx(float x){
        this.x=x;
    }
    
-   public void sety(int y){
+   public void sety(float y){
        this.y=y;
    }
    
-   public void getr(int r){
+   public float getr(float r){
        return r;
    }
 
-    void setX(int entrada) {
+    void setX(float entrada) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    void setY(int entrada) {
+    void setY(float entrada) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void set(int eleccion) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -11,7 +11,7 @@ import static java.lang.Math.*;
  *
  * @author Estudiantes
  */
-public class CalculadoraTrigonometrica extends Calculadora1 {
+public class Trigonometrica extends Calculadora1 {
     
   
     double coseno(){
